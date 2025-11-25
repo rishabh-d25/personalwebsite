@@ -1,0 +1,204 @@
+.card{
+    transition: all 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+
+/* Smooth hover scale & shadow */
+.btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: click "pop" animation */
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.btn-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-glow::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.1);
+    transform: rotate(45deg) translateX(-100%);
+    transition: transform 0.5s ease;
+}
+
+.btn-glow:hover::before {
+    transform: rotate(45deg) translateX(100%);
+}
+
+.accordion section {
+    min-height: 150px; /* base height for closed state */
+    height: auto;      /* allow to grow */
+    overflow: visible; /* ensure content isn’t cut */
+    transition: all 0.3s ease;
+}
+
+.accordion section {
+    display: flex;
+    flex-direction: column;
+}
+
+
+article.accordion
+{
+    display: block;
+    width: 43em;
+    margin: 0 auto;
+    background-color: #666;
+    overflow: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.3);
+}
+article.accordion section
+{
+    position: relative;
+    display: block;
+    float: left;
+    width: 2em;
+    height: 12em;
+    margin: 0.5em 0 0.5em 0.5em;
+    color: #333;
+    background-color: #333;
+    overflow: hidden;
+    border-radius: 3px;
+}
+article.accordion section h2
+{
+    position: absolute;
+    font-size: 1em;
+    font-weight: bold;
+    width: 12em;
+    height: 2em;
+    top: 12em;
+    left: 0;
+    text-indent: 1em;
+    padding: 0;
+    margin: 0;
+    color: #ddd;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+article.accordion section h2 a
+{
+    display: block;
+    width: 100%;
+    line-height: 2em;
+    text-decoration: none;
+    color: inherit;
+    outline: 0 none;
+}
+article.accordion section:target
+{
+    width: 30em;
+    padding: 0 1em;
+    color: #333;
+    background-color: #fff;
+}
+article.accordion section:target h2
+{
+    position: static;
+    font-size: 1.3em;
+    text-indent: 0;
+    color: #333;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+}
+article.accordion section,
+article.accordion section h2
+{
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+.gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120vh;
+    overflow: hidden;
+    margin-bottom: 5rem;
+}
+
+.item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: flex 0.8s ease;
+
+    &:hover{
+        flex: 7;
+    }
+}
+
+.item-1 {
+    background-image: url('https://images.unsplash.com/photo-1513026705753-bc3fffca8bf4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.item-2 {
+    background-image: url('https://images.unsplash.com/photo-1539498508910-091b5e859b1d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c25vcmtlbGluZ3xlbnwwfHwwfHx8MA%3D%3D');
+}
+
+.item-3 {
+    background-image: url('https://cdn.theatlantic.com/thumbor/n0qTf3RkhkUZ9leH3Z7yovgHAV0=/0x375:8185x4979/1600x900/media/img/mt/2022/12/GettyImages_1450067308/original.jpg');
+}
+
+.item-4 {
+    background-image: url('https://www.graveltravel.com/cdn/shop/articles/best-places-northern-lights-feature_520x500_c1666087-05f3-4625-9571-1f9ed7a5135f.jpg?v=1752869896');
+}
+
+.item-5 {
+    background-image: url('https://images.unsplash.com/photo-1605540436563-5bca919ae766?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+.item-6 {
+    background-image: url('/public/images/canon1.jpeg');
+}
+
+.item-7 {
+    background-image: url('/public/images/canon2.jpeg');
+}
+
+.item-8 {
+    background-image: url('/public/images/canon3.jpeg');
+}
+
+.item-9 {
+    background-image: url('/public/images/canon4.jpeg');
+}
+
+.item-10 {
+    background-image: url('/public/images/blueangels.jpeg');
+}
